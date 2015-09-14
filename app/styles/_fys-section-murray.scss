@@ -1,0 +1,55 @@
+/**********************************************
+Murray section styling
+**********************************************/
+
+#fuelyoursenses section.content .section.murray {
+
+	h3 {
+		text-transform: none;
+	}
+
+	.background-image-container {
+		background: url(../images/fuel-your-senses/section--murray--background.jpg) center center transparent;
+		background-size: 100% auto;
+		background-size: cover;
+
+		@media screen and (max-width: $screen-md-min) {
+			background-position: 85% center;
+		}
+	}
+
+	.content-body {
+	    position: absolute;
+	    bottom: 20%;
+	    left: 7%;
+	    width: 35%;
+	    opacity: 1;
+	    @include transition(all 0.75s ease-out);
+
+	    @media screen and (max-width: $screen-md-min) {
+			width: 86%;
+			bottom: 10%;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			width: 90%;
+			left: 5%;
+			bottom: 20px;
+		}
+	}
+
+	&.animate-out {
+		.content-body {
+			left: 0;
+			opacity: 0;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				left: 0;
+			}
+		}
+	}
+
+	.sub-title {
+		font-size: 20px;
+	}
+}

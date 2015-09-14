@@ -1,0 +1,260 @@
+/**********************************************
+McClaren Honda section styling
+**********************************************/
+#fuelyoursenses section.content .section.slick {
+  @media screen and (max-width: $screen-xsm-min) {
+    min-height: 615px;
+  }
+  .background-image-container {
+    background: url("../images/synergy/section--slick--background.jpg") center center transparent;
+    background-size: 100% auto;
+    background-size: cover;
+    @media screen and (max-width: $screen-md-min) {
+      background: url("../images/synergy/section--slick--480--background.jpg") center center transparent;
+      background-position: 95% bottom;
+      background-size: cover;
+    }
+  }
+
+  .media {
+    font-size: 18px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    .media-left, .media-body {
+      display: inline-block;
+    }
+
+    .media-body {
+      width: 70%;
+      @media screen and (max-width: 414px) {
+        width: 60%;
+      }
+    }
+
+    &.no-img {
+      max-width: 285px;
+      .media-body { width: 100%; }
+    }
+
+
+    h4 {
+      font-family: "EMPrint-Regular", Helvetica, Arial, sans-serif;
+      color: $synergy-red;
+      font-size: 21px;
+      font-weight: bold;
+    }
+  }
+
+  .slider {
+    .slick-slide {
+      width: 515px;
+      margin: 0 60px;
+      display: block;
+
+      @media screen and (max-width: $screen-xsm-min) {
+        margin: 0;
+        width: 690px;
+
+      }
+
+
+      &:focus { outline: none; }
+      &:hover { cursor: -webkit-grab; cursor: -moz-grab; }
+    }
+
+    .slick-dots {
+      @media screen and (max-width: $screen-xsm-min) {
+        display: none !important;
+      }
+    }
+  }
+
+  .content-body {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 100%;
+    max-width: 1200px;
+
+    @media screen and (min-width: 1366px) and (max-width: 1440px) {
+      left: 5%;
+    }
+
+    .slick-slider {
+      max-width: 1200px;
+      padding-bottom: 15px;
+      //border-top: 1px solid red;
+      //border-bottom: 1px solid red;
+
+      @media screen and (max-width: $screen-xsm-min) {
+        width: 100%;
+        padding-bottom: 0;
+      }
+    }
+
+    .slick-dots li{
+      height: auto;
+      width: 10%;
+      font-size: 24px;
+      padding-top: 10px;
+
+
+      a {
+        color: $synergy-blue;
+        opacity: 1;
+      }
+
+      &.slick-active {
+        background: url("../images/synergy/chevron-top.png") center top transparent no-repeat;
+        a {
+          color: $synergy-red;
+          font-weight: bold;
+        }
+      }
+
+      @media screen and (min-width: $screen-xsm-min) and (max-width: 1024px) {
+        width: 9%;
+      }
+    }
+
+    opacity: 1;
+    @include transition(all 0.75s ease-out);
+    @media screen and (min-width: $screen-md-min) and (max-width: 1280px) {
+      bottom: 5%;
+      width: 70%;
+    }
+    @media screen and (max-width: $screen-md-min) {
+      width: 86%;
+      bottom: 10%;
+    }
+    @media screen and (max-width: $screen-xsm-min) {
+      width: 90%;
+      left: 5%;
+      top: 20%;
+    }
+    @media screen and (max-width: $screen-xsl-min) {
+      top: 3%;
+    }
+
+    p {
+      display: inline-block;
+      width: 80%;
+
+      @media screen and (max-width: $screen-xsm-min) {
+        width: 90%;
+      }
+    }
+  }
+  &.animate-out {
+    .content-body {
+      left: 0;
+      opacity: 0;
+      @media screen and (max-width: $screen-xsm-min) {
+        left: 0;
+      }
+    }
+  }
+  .sub-title {
+    display: block;
+    width: 64px;
+    height: 37px;
+    background: transparent url("../images/fuel-your-senses/icon-vr.png") center center no-repeat;
+  }
+  .title {
+    margin: 20px 0;
+    width: 80%;
+    @media screen and (max-width: $screen-xsm-min) {
+      width: 100%;
+    }
+  }
+
+  &.gallery {
+    p {
+      @media screen and (max-width: $screen-xsm-min) {
+        width: 100%;
+      }
+    }
+
+    .slider {
+      .slick-slide {
+        margin: 0 25px;
+
+        img { width: 100%; }
+
+        /* .video-trigger {
+          position: relative;
+          .thumb {
+            filter: url(#brightness);
+            filter: brightness(75%);
+          }
+
+          .play {
+            position: absolute;
+            top: 50%;
+          }
+        } */
+      }
+    }
+
+    .slash-border::after {
+      width: 45%;
+      margin: 2% 0;
+
+      @media screen and (min-width: $screen-xsm-min) and (max-width: 1024px) {
+        width: 100%;
+      }
+
+      @media screen and (max-width: $screen-xsm-min) {
+        width: 60%;
+      }
+
+      @media screen and (max-width: $screen-xsl-min) {
+        width: 100%;
+      }
+    }
+
+    .drag-note {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 12px;
+      font-family: "EMPrint-SemiBold";
+      &::before, &::after {
+        content: "";
+  			width: 7px;
+  			background: url("../images/synergy/drag-arrow.png") 0 0 no-repeat;
+  			position: relative;
+  			display: inline-block;
+  			height: 10px;
+  			margin: 0 10px;
+      }
+
+      &::after {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      small { vertical-align: 2px; }
+    }
+
+    .content-body {
+      top: 5%; 
+      
+      @media screen and (min-width: $screen-md-min) and (max-width: 1280px) {
+        width: 70%;
+      }
+      @media screen and (max-width: $screen-md-min) {
+        width: 86%;
+        bottom: 10%;
+      }
+      @media screen and (max-width: $screen-xsm-min) {
+        top: 3%;
+      }
+    }
+  }
+}

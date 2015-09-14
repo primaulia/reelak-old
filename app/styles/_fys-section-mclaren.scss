@@ -1,0 +1,88 @@
+/**********************************************
+McClaren Honda section styling
+**********************************************/
+
+#fuelyoursenses section.content .section.mclaren-honda {
+    @media screen and (max-width: $screen-xsm-min) {
+        min-height: 797px;
+    }
+
+    .background-image-container {
+        background: url(../images/synergy/section--mclaren--background.jpg) center center transparent;
+        background-size: 100% auto;
+        background-size: cover;
+
+        @media screen and (max-width: $screen-md-min) {
+            background: url(../images/synergy/section--mclaren--480--background.jpg) center center transparent;
+            background-position: 95% bottom;
+            background-size: cover;
+        }
+    }
+
+    .content-body {
+        position: absolute;
+        top: 10%;
+        right: 15%;
+        width: 32%;
+        opacity: 1;
+        @include transition(all 0.75s ease-out);
+
+        @media screen and (min-width: 1366px) and (max-width: 1440px) {
+            width: 40%;
+            top: 10%;
+            right: 10%;
+        }
+
+        @media screen and (min-width: $screen-md-min) and (max-width: 1280px) {
+            top: 5%;
+            width: 50%;
+            right: 5%;
+        }
+
+        @media screen and (max-width: $screen-md-min) {
+            width: 85%;
+            bottom: 10%;
+        }
+
+        @media screen and (max-width: $screen-xsm-min) {
+            left: 5%;
+            top: 2%;
+        }
+
+        p {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    &.animate-out {
+        .content-body {
+            left: 0;
+            opacity: 0;
+
+            @media screen and (max-width: $screen-xsm-min) {
+                left: 0;
+            }
+        }
+    }
+
+    .sub-title {
+        display: block;
+        width: 64px;
+        height: 37px;
+        background: transparent url(../images/fuel-your-senses/icon-vr.png) center center no-repeat;
+    }
+
+    .title {
+        margin: 20px 0;
+        width: 80%;
+
+        @media screen and (max-width: $screen-xsm-min) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $screen-xsl-min) {
+            width: 95%;
+        }
+    }
+}

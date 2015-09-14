@@ -1,0 +1,326 @@
+/**********************************************
+Your senses section styling
+**********************************************/
+
+#fuelyoursenses section.content .section.your-senses {
+	.slides {
+		left: -100%;
+	}
+
+	.slide[data-slide-id='sight'] .background-image-container {
+		background: url(../images/fuel-your-senses/section--your-senses-sight--background.jpg) center center transparent;
+		background-size: 100% auto;
+		background-size: cover;
+	}
+
+	.slide[data-slide-id='choose'] {
+		background: #1f2b3a;
+		@include linear-gradient-horizontal-background(#301a1a, #1f2b3a);
+	}
+
+	.slide[data-slide-id='choose'] .background-title {
+		background: url(../images/fuel-your-senses/text-fuel-size-100.png) center center transparent;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -34px;
+		margin-left: -120px;
+		display: block;
+		width: 240px;
+		height: 72px;
+
+		@media screen and (max-width: $screen-md-min) {
+			background-size: auto 55px;
+			height: 55px;
+			margin-top: -25px;
+			width: 184px;
+			margin-left: -92px;
+		}
+
+		@media screen and (max-width: $screen-xsl-min) {
+			background-size: auto 45px;
+			height: 45px;
+			margin-top: -12px;
+			width: 150px;
+			margin-left: -75px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			top: 60%;
+			margin-top: -12px;
+			margin-left: -49px;
+			height: 30px;
+			background-size: auto 30px;
+			width: 98px;
+		}
+	}
+
+	.slide[data-slide-id='sound'] .background-image-container {
+		background: url(../images/fuel-your-senses/section--your-senses-sound--background.jpg) center center transparent;
+		background-size: 100% auto;
+		background-size: cover;
+	}
+
+	.slide[data-slide-id='choose'] .background-image-container {
+		width: 200%;
+		background: url(../images/fuel-your-senses/section--your-senses-choose--background.jpg) center center transparent;
+		background-size: 100% auto;
+		background-size: cover;
+	}
+
+	.choose-button-container {
+		position: absolute;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		border: none;
+		box-sizing: border-box;
+		overflow: hidden;
+
+		.sight-button,
+		.sound-button {
+			position: absolute;
+			top: 75%;
+			width: 100%;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				top: 82%;
+			}
+		}
+
+		&.sight {
+			left: 0;
+
+			.background-image-container {
+				left: 0;
+			}
+
+			.title {
+				width: 200%;
+			}
+		}
+
+		&.sound {
+			left: 50%;
+
+			.background-image-container {
+				left: -100%;
+			}
+
+			.title {
+				width: 200%;
+  				left: -100%;
+			}
+		}
+
+		&.animating {
+			border: 1px solid #fff;
+		}
+	}
+
+	.title {
+		position: absolute;
+		top: 50%;
+		margin-top: -55px;
+		width: 100%;
+		text-align: center;
+
+		@media screen and (max-width: $screen-md-min) {
+			font-size: 75px;
+			margin-top: -40px;
+		}
+
+		@media screen and (max-width: $screen-xsl-min) {
+			font-size: 62px;
+  			margin-top: -24px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+  			top: 60%;
+			font-size: 42px;
+			margin-top: -20px;
+		}
+	}
+
+	.sub-title {
+		margin-top: 0;
+	}
+
+	a.play-video-button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -50px;
+		margin-left: -50px;
+
+		@media screen and (max-width: $screen-xsm-min) { 
+			margin-top: -37px;
+			margin-left: -37px;
+		}
+	}
+
+	a.back-to-choose-button {
+		position: absolute;
+		top: 50%;
+		margin-top: -20px;
+
+		@media screen and (max-width: $screen-xsl-min) {
+			position: absolute;
+			top: 30px;
+			margin-top: 0;
+		}
+	}
+
+	&[data-current-slide-index='0'],
+	&[data-current-slide-index='2'] {
+		a.next-section-button {
+			display: none;
+		}
+	}
+
+	.your-senses-slide[data-slide-id='sight'] {
+		a.back-to-choose-button {
+			right: 30px;
+
+			@media screen and (max-width: $screen-md-min) {
+				right: 7%;
+			}
+
+			@media screen and (max-width: $screen-xsm-min) {
+				right: 5%;
+			}
+		}
+	}
+
+	.your-senses-slide[data-slide-id='sound'] {
+		a.back-to-choose-button {
+			left: 30px;
+
+			@media screen and (max-width: $screen-md-min) {
+				left: 7%;
+			}
+
+			@media screen and (max-width: $screen-xsm-min) {
+				left: 5%;
+			}
+		}
+	}
+
+	.content-body {
+		position: absolute;
+		top: 50%;
+		margin-top: -25px;
+		width: 25%;
+
+		@media screen and (max-width: $screen-xlg-min) {
+			width: 35%;
+		}
+
+		@media screen and (max-width: $screen-md-min) {
+			top: auto;
+			bottom: 10%;
+			margin-top: 0;
+			width: 86%;
+		}
+	}
+
+	.your-senses-slide[data-slide-id='sight'] {
+		.content-body {
+			right: 7%;
+
+			@media screen and (max-width: $screen-md-min) {
+				right: auto;
+				left: 7%;
+			}
+
+			@media screen and (max-width: $screen-xsm-min) {
+				left: 5%;
+			}
+		}
+	}
+
+	.your-senses-slide[data-slide-id='sound'] {
+		.content-body {
+			left: 7%;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				left: 5%;
+			}
+		}
+	}
+}
+
+/**********************************************
+Language specific styling
+**********************************************/
+
+html[lang='it-it'] #fuelyoursenses section.content .section.your-senses {
+	.slide[data-slide-id='choose'] .background-title {
+		background-image: url(../images/fuel-your-senses/text-fuel-size-100.it.png);
+	}
+}
+
+html[lang='de-lu'] #fuelyoursenses section.content .section.your-senses {
+	.slide[data-slide-id='choose'] .background-title {
+		background-image: url(../images/fuel-your-senses/text-fuel-size-100.de.png);
+	}
+}
+
+html[lang='fr-lu'] #fuelyoursenses section.content .section.your-senses,
+html[lang='fr-be'] #fuelyoursenses section.content .section.your-senses {
+	.slide[data-slide-id='choose'] .background-title {
+		background-image: url(../images/fuel-your-senses/text-fuel-size-100.fr.png);
+	}
+}
+
+html[lang='de-lu'] #fuelyoursenses section.content .section.your-senses,
+html[lang='fr-lu'] #fuelyoursenses section.content .section.your-senses,
+html[lang='fr-be'] #fuelyoursenses section.content .section.your-senses {
+	.slide[data-slide-id='choose'] .background-title {
+		margin-left: -250px;
+		width: 500px;
+
+		@media screen and (max-width: $screen-md-min) {
+			background-size: auto 55px;
+			width: 377px;
+			margin-left: -188px;
+		}
+
+		@media screen and (max-width: $screen-xsl-min) {
+			background-size: auto 45px;
+			width: 308px;
+			margin-left: -154px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			background-size: auto 30px;
+			width: 205px;
+			margin-left: -102px;
+		}
+	}
+}
+
+html[lang='it-it'] #fuelyoursenses section.content .section.your-senses {
+	.slide[data-slide-id='choose'] .background-title {
+		margin-left: -400px;
+		width: 800px;
+
+		@media screen and (max-width: $screen-md-min) {
+			background-size: auto 55px;
+			width: 377px;
+			margin-left: -188px;
+		}
+
+		@media screen and (max-width: $screen-xsl-min) {
+			background-size: auto 45px;
+			width: 308px;
+			margin-left: -154px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			background-size: auto 30px;
+			width: 205px;
+			margin-left: -102px;
+		}
+	}
+}

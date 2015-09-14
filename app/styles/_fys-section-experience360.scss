@@ -1,0 +1,84 @@
+/**********************************************
+Murray section styling
+**********************************************/
+
+#fuelyoursenses section.content .section.experience360,
+#fuelyoursenses section.content .section.slicktest {
+    @media screen and (max-width: $screen-xsm-min) {
+        min-height: 920px;
+    }
+
+    .slash-border {
+		&.show-top::before, &.show-bottom::after {
+			width: 83%;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				width: 55%;
+			}
+		}
+    }
+
+    .background-image-container {
+        background: url(../images/synergy/section--eventdetails--background.jpg) center center transparent;
+        background-size: 100% auto;
+        background-size: cover;
+
+        @media screen and (max-width: $screen-md-min) {
+            background: url(../images/synergy/section--eventdetails--480--background.jpg) center center transparent;
+            background-position: 95% bottom;
+            background-size: cover;
+        }
+    }
+
+    .content-body {
+        position: absolute;
+        top: 5%;
+        left: 7%;
+        width: 46%;
+        opacity: 1;
+        @include transition(all 0.75s ease-out);
+
+        @media screen and (min-width: $screen-md-min) and (max-width: 1280px) {
+            bottom: 5%;
+            width: 70%;
+        }
+
+        @media screen and (max-width: $screen-md-min) {
+            width: 86%;
+            bottom: 10%;
+        }
+
+        @media screen and (max-width: $screen-xsm-min) {
+            width: 90%;
+            left: 5%;
+            top: 2%;
+        }
+
+        p {
+            display: inline-block;
+            width: 85%;
+        }
+    }
+
+    &.animate-out {
+        .content-body {
+            left: 0;
+            opacity: 0;
+
+            @media screen and (max-width: $screen-xsm-min) {
+                left: 0;
+            }
+        }
+    }
+
+    .sub-title {
+        display: block;
+        width: 64px;
+        height: 37px;
+        background: transparent url(../images/fuel-your-senses/icon-vr.png) center center no-repeat;
+    }
+
+    .title {
+        margin: 20px 0;
+    }
+}

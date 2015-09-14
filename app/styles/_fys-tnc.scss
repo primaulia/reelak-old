@@ -1,0 +1,35 @@
+/**********************************************
+T&C section styling
+**********************************************/
+
+#fuelyoursenses section.content.tnc-content {
+	background: url(../images/fuel-your-senses/bg-tnc.jpg) no-repeat bottom center #000000;
+	background-size: contain;
+	
+	.module-wrapper {
+		.module {
+			background: transparent;
+			
+			h1 {
+				color: #49afe8;
+				font-family: "EMPrint-SemiBold";
+				font-size: 34px;
+				text-transform: none;
+			}
+			
+			h4 {
+				font-family: "EMPrint-Bold";
+				font-size: 20px;
+				margin-top: 50px;
+				text-transform: none;
+			}
+			
+			ol {
+				li {
+					font-family: "EMPrint-SemiBold";
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}

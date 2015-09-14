@@ -1,0 +1,302 @@
+/**********************************************
+Button styling
+**********************************************/
+
+#fuelyoursenses section.content {
+	a,
+	a:link,
+	a:active,
+	a:visited {
+		color: #fff;
+		opacity: 1;
+		@include transition(opacity 0.35s ease-out);
+		outline: 0;
+		text-decoration: none;
+
+		&:hover {
+			opacity: 0.5;
+			text-decoration: none;
+		}
+	}
+
+	a.body-copy-button {
+		font-family: 'EMPrint-Bold';
+	}
+
+	a.chevron-button {
+		@include fuel-your-senses-sprite();
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+
+		@media screen and (max-width: $screen-xsm-min) {
+			background-size: 100px auto;
+			width: 20px;
+			height: 20px;
+		}
+
+		&.down {
+			background-position: 0 -150px;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				background-position: 0 -75px;
+			}
+		}
+
+		&.up {
+			background-position: -40px -150px;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				background-position: -20px -75px;
+			}
+		}
+
+		&.right,
+		&.left {
+			width: 22px;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				width: 11px;
+			}
+		}
+
+		&.right {
+			background-position: -80px -150px;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				background-position: -40px -75px;
+			}
+		}
+
+		&.left {
+			background-position: -120px -150px;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				background-position: -60px -75px;
+			}
+		}		
+	}
+
+	a.chevron-circle-button { 
+		@include fuel-your-senses-sprite();
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		position: relative;
+
+		&.down {
+			background-position: 0 0;
+		}
+
+		&.down.dark-blue {
+			background-position: -40px 0;
+		}
+
+		&.with-label {
+			.button-label {
+				font-family: "EMPrint-BoldItalic";
+				font-size: 12px;
+				left: -310px;
+				line-height: 40px;
+				position: absolute;
+				text-align: right;
+				text-transform: uppercase;
+				width: 300px;
+			}
+		}
+
+		&.label-left {
+			.button-label {}
+		}
+	}
+
+	a.play-video-button {
+		@include fuel-your-senses-sprite();
+		background-position: 0 -40px;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+
+		@media screen and (max-width: $screen-xsm-min) {
+			background-size: 150px auto;
+			background-position: 0 -30px;
+			width: 75px;
+			height: 75px;
+		}
+	}
+
+/* 	a.partner-button {
+		@include fuel-your-senses-sprite();
+		background-size: 300px auto;
+		background-position: 0 -300px;
+		display: inline-block;
+		width: 202px;
+		height: 57px;
+	} */
+
+	a.icon-with-label-button {
+		@include fuel-your-senses-sprite();
+		display: inline-block;
+		height: 36px;
+		padding-left: 44px;
+
+		.button-label {
+			font-family: "EMPrint-BoldItalic";
+			font-size: 12px;
+			line-height: 36px;
+		}
+
+		&.twitter {
+			background-position: 0 -240px;
+		}
+
+		&.facebook {
+			background-position: 0 -280px;
+		}
+
+		&.refresh {
+			background-position: 0 -370px;
+			text-transform: uppercase;
+		}
+
+		&.play {
+			background-position: 0 -420px;
+			text-transform: uppercase;
+		}
+
+		&.chevron-right {
+			background-position: 0 -470px;
+			text-transform: uppercase;
+		}
+	}
+
+	a.large-font-with-chevron-button {
+		text-align: center;
+		font-family: 'EMPrint-BoldItalic';
+		font-size: 50px;
+		text-transform: uppercase;
+
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 25px;
+		}
+
+		.button-icon,
+		.button-label {
+			display: inline-block;
+		}
+
+		.button-icon {
+			@include fuel-your-senses-sprite();
+			width: 22px;
+			height: 38px;
+
+			@media screen and (max-width: $screen-xsm-min) {
+				background-size: 100px auto;
+				width: 11px;
+				height: 19px;
+			}
+		}
+
+		&.chevron-right {
+			.button-icon {
+				background-position: -80px -150px;
+
+				@media screen and (max-width: $screen-xsm-min) {
+					background-position: -40px -75px;
+				}
+			}
+		}
+
+		&.chevron-left {
+			.button-icon {
+				background-position: -120px -150px;
+
+				@media screen and (max-width: $screen-xsm-min) {
+					background-position: -60px -75px;
+				}
+			}
+		}
+	}
+
+	a.answer-button {
+		display: block;
+		position: relative;
+		background: #fff;
+		opacity: 1;
+		padding: 30px;
+		@include transition(all 0.35s ease-out);
+
+		@media screen and (max-width: $screen-xsm-min) { 
+			padding: 10px 5%;
+		}
+
+		.button-label {
+			display: block;
+			font-family: 'EMPrint-BoldItalic';
+			font-size: 22px;
+			line-height: 28px;
+			color: #1f2b3a;
+			text-transform: uppercase;
+
+			@media screen and (max-width: $screen-sm-min) {
+				font-size: 18px;
+				line-height: 24px;
+			}
+
+			@media screen and (max-width: $screen-xsl-min) {
+				font-size: 14px;
+				line-height: 20px;
+			}
+
+			@media screen and (max-width: $screen-xsm-min) { 
+				font-size: 11px;
+				line-height: 16px;
+			}
+		}
+
+		.button-selected-indicator {
+			@include fuel-your-senses-sprite();
+			background-position: 0 -320px;
+			width: 60px;
+			height: 44px;
+			display: inline-block;
+			position: absolute;
+			left: 30px;
+			bottom: 30px;
+
+			@media screen and (max-width: $screen-md-min) { 
+				display: none !important;
+			}
+
+			@media screen and (max-height: $screen-sm-min) { 
+				display: none !important;
+			}
+		}
+
+		&:hover,
+		&.selected {
+			background: #1f2b3a;
+			opacity: 1;
+			text-decoration: none;
+
+			.button-label {
+				color: #fff;
+			}
+		}
+	}
+}
+
+html[lang='fr-lu'] #fuelyoursenses section.content,
+html[lang='fr-be'] #fuelyoursenses section.content {
+	a.large-font-with-chevron-button {
+		.button-label {
+			padding-top: 0.2em;
+		}
+	}
+
+	a.answer-button {
+		.button-label {
+			padding-top: 0.2em;
+		}
+	}
+}

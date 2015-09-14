@@ -1,0 +1,106 @@
+/**********************************************
+Font styling
+**********************************************/
+
+#fuelyoursenses section.content { 
+	font-size: 20px;
+	color: #fff;
+
+	h1, h2, h3, h4, p {
+		font-size: 20px;
+		color: #fff;
+		letter-spacing: -0.2px;
+
+		@media screen and (max-width: $screen-sm-min) {
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 16px;
+		}
+	}
+
+	h1, h2, h3, h4 {
+		font-family: 'EMPrint-BoldItalic';
+		text-transform: uppercase;
+
+		&.no-uppercase {
+			text-transform: none;
+		}
+
+		&.no-italic {
+			font-family: 'EMPrint-Bold';
+		}
+	}
+
+	h1 {
+		font-size: 80px;
+
+		@media screen and (max-width: $screen-sm-min) {
+			font-size: 65px;
+		}
+		
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 52px;
+		}
+
+		@media screen and (max-width: $screen-xsl-min) {
+			font-size: 30px;
+		}
+	}
+
+	h2 {
+		font-size: 100px;
+
+		@media screen and (max-width: $screen-sm-min) {
+			font-size: 75px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 50px;
+		}
+	}
+
+	h3, h4 {
+		font-size: 50px;
+
+		@media screen and (max-width: $screen-sm-min) {
+			font-size: 35px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 25px;
+		}
+	}
+
+	.small-p {
+/* 		@media screen and (max-width: $screen-sm-min) {
+			font-size: 18px;
+		} */
+
+		font-size: 15px;
+        line-height: 1.2;
+
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 13px;
+			line-height: 1;
+		}
+	}
+}
+
+/**********************************************
+Language specific styling
+**********************************************/
+
+html[lang='de-lu'] body#fuelyoursenses {
+	h1, h2, h3, h4 {
+		padding-top: 0.2em;
+	}
+}
+
+html[lang='fr-lu'] body#fuelyoursenses,
+html[lang='fr-be'] body#fuelyoursenses {
+	h1, h2, h3, h4 {
+		padding-top: 0.2em;
+	}
+}

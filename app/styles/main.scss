@@ -1,0 +1,19 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$screen-xsl-min: 600px;
+$screen-xsm-min: 768px;
+$screen-xlg-min: 1440px;
+$synergy-blue: #49afe8;
+$synergy-red: #bc1b1c;
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "fys-base";
+
+.variable-width .slick-slide {
+  margin: 5px;
+}
+
+::-moz-selection { background: yellow; }
+::selection { background: yellow; }

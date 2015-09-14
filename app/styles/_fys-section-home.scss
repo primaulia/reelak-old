@@ -1,0 +1,734 @@
+/**********************************************
+Home section styling
+**********************************************/
+
+$main-animation-end-frame-animation-duration: 10s;
+$main-animation-end-frame-animation-timing-function: linear;
+
+@mixin animation($name, $timing-function, $duration, $fill-mode, $iteration-count:1) {
+	animation-name: $name;
+	animation-timing-function: $timing-function;
+	animation-duration: $duration;
+	animation-fill-mode: $fill-mode;
+	-webkit-animation-name: $name;
+	-webkit-animation-timing-function: $timing-function;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-fill-mode: $fill-mode;
+	-ms-animation-name: $name;
+	-ms-animation-timing-function: $timing-function;
+	-ms-animation-duration: $duration;
+	-ms-animation-fill-mode: $fill-mode;
+
+	@if $iteration-count != null {
+		animation-iteration-count: $iteration-count;
+		-webkit-animation-iteration-count: $iteration-count;
+		-ms-animation-iteration-count: $iteration-count;
+	}
+}
+
+@mixin main-animation-show {
+	0% {
+    	opacity: 0;
+    }
+    100% {
+    	opacity: 1;
+    }
+}
+
+@keyframes main-animation-show {
+    @include main-animation-show();
+}
+
+@-webkit-keyframes main-animation-show {
+    @include main-animation-show();
+}
+
+@-ms-keyframes main-animation-show {
+    @include main-animation-show();
+}
+
+@mixin main-animation-end-frame-f1-no-glow-show {
+	0% {
+    	opacity: 0;
+    }
+    20% {
+    	opacity: 0;
+    }
+    70% {
+    	opacity: 1;
+    }
+    100% {
+    	opacity: 1;
+    }
+}
+
+@keyframes main-animation-end-frame-f1-no-glow-show {
+    @include main-animation-end-frame-f1-no-glow-show();
+}
+
+@-webkit-keyframes main-animation-end-frame-f1-no-glow-show {
+    @include main-animation-end-frame-f1-no-glow-show();
+}
+
+@-ms-keyframes main-animation-end-frame-f1-no-glow-show {
+    @include main-animation-end-frame-f1-no-glow-show();
+}
+
+@mixin main-animation-end-frame-f1-glow-show {
+	0% {
+    	opacity: 0;
+    }
+    20% {
+    	opacity: 0;
+    }
+    70% {
+    	opacity: 0.5;
+    }
+    80% {
+    	opacity: 0;
+    }
+    100% {
+    	opacity: 0;
+    }
+}
+
+@keyframes main-animation-end-frame-f1-glow-show {
+    @include main-animation-end-frame-f1-glow-show();
+}
+
+@-webkit-keyframes main-animation-end-frame-f1-glow-show {
+    @include main-animation-end-frame-f1-glow-show();
+}
+
+@-ms-keyframes main-animation-end-frame-f1-glow-show {
+    @include main-animation-end-frame-f1-glow-show();
+}
+
+@mixin next-section-button-pulse {
+	0% {
+    	opacity: 0;
+    }
+    30% {
+    	opacity: 1;
+    }
+    50% {
+    	opacity: 1;
+    }
+    100% {
+    	opacity: 0;
+    }
+}
+
+@keyframes next-section-button-pulse {
+    @include next-section-button-pulse();
+}
+
+@-webkit-keyframes next-section-button-pulse {
+    @include next-section-button-pulse();
+}
+
+@-ms-keyframes next-section-button-pulse {
+    @include next-section-button-pulse();
+}
+
+#fuelyoursenses section.content .section.home {
+
+	.background-image-container {
+		background: url(../images/fuel-your-senses/section--main--background.jpg) center center transparent;
+		background-size: 100% auto;
+		background-size: cover;
+		display: none;
+	}
+
+	.main-animation {
+		/* Main animation */
+
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+
+		position: absolute;
+		top: 60%;
+		left: 50%;
+
+		-webkit-transform: translate(-50%, -56.5%);
+		-moz-transform: translate(-50%, -56.5%);
+		-ms-transform: translate(-50%, -56.5%);
+		transform: translate(-50%, -56.5%);
+
+		@media screen and (min-width: 375px) {
+			top: 45%;
+		}
+
+		@media screen and (min-width: 480px) {
+			top: 50%;
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 769px) {
+			top: 55%;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			width: 130%;
+		}
+
+		@media screen and (max-width: $screen-xs-min) {
+			width: 140%;
+		}
+
+		.animation {
+			visibility: hidden;
+			opacity: 0;
+			background: #000;
+		}
+
+		&.animate .animation {
+			visibility: visible;
+			@include animation(main-animation-show, ease-in, 1s, forwards);
+		}
+
+		.loading {
+			display: inline-block;
+			top: 56%;
+			left: 50%;
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			margin-top: -16px;
+			margin-left: -16px;
+		}
+
+		&.animate .loading {
+			display: none;
+		}
+
+		.background-static {
+			position: relative;
+			width: 100%;
+			height: auto;
+		}
+
+		.background {
+			position: absolute;
+			width: 105%;
+			height: auto;
+/* 			left: -2.5%;
+			top: -2.5%; */
+			left: 5%;
+    		bottom: 15%;
+			max-width: 105%;
+			
+			@media screen and (max-width: $screen-xsm-min) {
+				bottom: 7%;
+			}
+		}
+
+
+		/* Main animation: end frame; */
+
+		&.animate .end-frame {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&.animate .end-frame .jb,
+		&.animate .end-frame .f1-car {
+			position: absolute;
+/* 			top: 46.75%;
+			left: 15%;
+			width: 69.86%; */
+			top: 45%;
+			left: 32%;
+			width: 49%;
+
+			@media screen and (min-width: 1439px) and (max-width: 1440px) {
+				left: 37%;
+			}
+
+			@media screen and (min-width: $screen-xsm-min) and (max-width: 1024px) {
+				width: 52%;
+				top: 45%;
+				left: 33%;
+			}
+
+
+			@media screen and (max-width: $screen-xsm-min) {
+/* 				left: 25%;
+				width: 45%;
+				top: initial;
+				bottom: 21%; */
+				left: 22%;
+				width: 60%;
+				top: initial;
+				bottom: 19%;
+			}
+
+			@media screen and (min-width: 600px) and (max-width: 736px) {
+/* 				left: 25%;
+				width: 55%;
+				bottom: 16%; */
+	
+				left: 31%;
+				width: 40%;
+				bottom: 25%;
+			}
+
+			@media screen and (max-width: $screen-xsl-min) {
+				bottom: 20%;
+			}
+
+			@media screen and (max-width: 480px) {
+				bottom: 18%;
+			}
+
+			@media screen and (max-width: 414px) {
+				left: 15%;
+    			width: 70%;
+    			bottom: 9%;
+			}
+
+			@media screen and (max-width: 360px) {
+				bottom: 16%;
+			}
+
+			@media screen and (max-width: 320px) {
+				bottom: 13%;
+			}
+		}
+
+		&.animate .end-frame .jb img,
+		&.animate .end-frame .f1-car img {
+			width: 100%;
+			height: auto;
+		}
+
+		&.animate .end-frame .jb .jb-shadow-left {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&.animate .end-frame .jb .jb-shadow-right {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		&.animate .end-frame .f1-car .jb-no-glow {
+			@include animation(
+				main-animation-end-frame-f1-no-glow-show,
+				$main-animation-end-frame-animation-timing-function,
+				$main-animation-end-frame-animation-duration,
+				forwards);
+		}
+
+		&.animate .end-frame .f1-car .jb-glow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+
+			@include animation(
+				main-animation-end-frame-f1-glow-show,
+				$main-animation-end-frame-animation-timing-function,
+				$main-animation-end-frame-animation-duration,
+				forwards);
+		}
+
+		&.animate .end-frame .middleground {
+			position: absolute;
+/* 			top: 59.45%;
+			left: -1%;
+			width: 102%;
+			height: 34.565%;
+			overflow: hidden; */
+			width: 105%;
+			height: auto;
+			left: 5%;
+			bottom: 15%;
+			max-width: 105%;
+			opacity: 0.3;
+			@media screen and (max-width: $screen-xsm-min) {
+				bottom: 0;
+			}
+		}
+
+		&.animate .end-frame .middleground img {
+			width: 100%;
+			height: auto;
+		}
+
+		&.animate .end-frame .foreground {
+			position: absolute;
+			top: 64.5%;
+			left: -5%;
+			width: 110%;
+			height: 30.5%;
+			overflow: hidden;
+		}
+
+		&.animate .end-frame .foreground img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.content-body {
+		position: absolute;
+		max-width: 590px;
+    	width: 42%;
+    	left: 30%;
+		margin-left: -365px;
+		bottom: 75px;
+
+		
+
+		&.en-gb {
+			top: 20%;
+			text-align: left;
+
+			@media screen and (min-width: $screen-md-min) and (max-width: 1140px) {
+				left: 40%;
+				top: 15%;
+			}
+
+			h1 {
+				margin-bottom: -10px;
+/* 				background: url('../images/synergy/landing_shdw.png') 50% 50% no-repeat;
+				background-size: 100%; */
+
+				font-family: 'EMPrint-SemiBold';
+
+				@media screen and (min-width: $screen-md-min) and (max-width: 1366px) {
+					font-size: 58px;
+				}
+
+				@media screen and (min-width: $screen-xsl-min) and (max-width: $screen-xsm-min) {
+					font-size: 40px;
+				}
+			}
+
+			p {
+				font-size: 30px;
+				margin-top: 2%;
+				width: 90%;
+
+				a {
+					color: $synergy-blue;
+					opacity: 1;
+				}
+
+				@media screen and (min-width: $screen-md-min) and (max-width: 1140px) {
+					width: 86%;
+					font-size: 25px;
+				}
+
+				@media screen and (max-width: $screen-sm-min) {
+					width: 86%;
+					left: 7%;
+					margin: 2% auto;
+				}
+
+				@media screen and (max-width: $screen-xsm-min) {
+/* 					width: 89%;
+					left: 10%;
+					top: 18%; */
+
+					left: 5%;
+					font-size: 16px;
+					width: 86%;
+				}
+
+/* 				@media screen and (max-width: $screen-xsl-min) {
+					left: 5%;
+					font-size: 16px;
+					width: 86%;
+				} */
+			}
+
+
+			@media screen and (max-width: $screen-md-min) {
+				text-align: center;
+				top: 200px;
+
+				h1 {
+/* 					background: none; */
+					margin-bottom: 0px;
+				}
+			}
+
+			@media screen and (max-width: $screen-sm-min) {
+				width: 86%;
+				left: 7%;
+				margin-left: 0;
+			}
+
+			@media screen and (max-width: $screen-xsm-min) {
+				width: 89%;
+				left: 12%;
+				top: 15%;
+			}
+
+			@media screen and (max-width: 736px) {
+				top: 17%;
+				left: 11%;
+			}
+
+			@media screen and (max-width: 667px) {
+				top: 18%;
+				left: 6%;
+			}
+
+			@media screen and (max-width: $screen-xsl-min) {
+				left: 5%;
+			}
+
+
+		}
+
+		h1 span {
+			text-indent: -119988px;
+			overflow: hidden;
+			text-align: left;
+			text-transform: capitalize;
+			background-image: url('../images/synergy/race.png');
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			width: 245px;
+    		height: 75px;
+			display: inline-block;
+			vertical-align: middle;
+			background-size: 100%;
+
+			@media screen and (min-width: $screen-md-min) and (max-width: 1366px) {
+				width: 185px;
+    			height: 60px;
+			}
+
+			@media screen and (max-width: $screen-xsm-min) {
+				width: 150px;
+				height: auto;
+			}
+
+			@media screen and (max-width: $screen-xsl-min) {
+				width: 90px;
+			}
+		}
+
+		@media screen and (max-width: $screen-md-min) {
+			bottom: 65px;
+		}
+
+		@media screen and (max-width: $screen-sm-min) {
+			width: 86%;
+			left: 7%;
+			margin-left: 0;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			width: 90%;
+			left: 5%;
+		}
+
+	}
+
+	a {
+		&.partner-button, &.synergy-button { position: absolute; }
+		&.partner-button {
+			left: 100px;
+			bottom: 35px;
+
+			text-indent: -119988px;
+			overflow: hidden;
+			text-align: left;
+			text-transform: capitalize;
+			background-image: url('../images/synergy/mclaren.png');
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			width: 170px;
+			height: 50px;
+			display: inline-block;
+			vertical-align: middle;
+			background-size: 100%;
+
+			@media screen and (max-width: $screen-md-min) {
+				top: 30px;
+				left: 80%;
+				margin-top: 0;
+				margin-left: -101px;
+			}
+
+			@media screen and (max-width: $screen-xsm-min) {
+				top: 30px;
+    			left: 24%;
+				width: 150px;
+			}
+
+			@media screen and (max-width: $screen-xsl-min) {
+				left: 38%;
+			}
+
+			@media screen and (min-width: 480px) and (max-width: 667px) {
+				left: 30%;
+			}
+		}
+
+		&.synergy-button {
+			right: 100px;
+			bottom: 30px;
+
+			text-indent: -119988px;
+			overflow: hidden;
+			text-align: left;
+			text-transform: capitalize;
+			background-image: url('../images/synergy/synergy.png');
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			width: 92px;
+			height: 65px;
+			display: inline-block;
+			vertical-align: middle;
+			background-size: 100%;
+
+			@media screen and (max-width: $screen-md-min) {
+				top: 30px;
+				right: 80%;
+				margin-top: 0;
+				margin-left: -101px;
+			}
+
+			@media screen and (max-width: $screen-xsm-min) {
+				top: 30px;
+				right: 12%;
+			}
+
+			@media screen and (min-width: 480px) and (max-width: 667px) {
+				right: 10%;
+			}
+		}
+
+	}
+
+	a.next-section-button {
+		@include animation(
+			next-section-button-pulse, linear, 5s, none, infinite);
+
+		&.en-gb {
+			bottom: 50px;
+			margin-left: -28px;
+			background: url(../images/fuel-your-senses/big-chevron.png) no-repeat, none;
+			background-size: 100%;
+
+			.button-label {
+				left: -50px;
+				text-align: center;
+				width: 150px;
+				top: 50px;
+			}
+
+			@media screen and (max-width: $screen-md-min) {
+				display: none;
+/* 				bottom: 50px;
+				width: 55px;
+				height: 55px;
+				left: 50%; */
+			}
+
+/* 			@media screen and (max-width: $screen-xsl-min) {
+				display: none;
+			} */
+		}
+
+		@media screen and (max-width: $screen-md-min) {
+			display: block;
+			right: auto;
+			bottom: 30px;
+			left: 50%;
+			margin-left: -18px;
+		}
+
+		.button-label {
+			@media screen and (max-width: $screen-md-min) {
+				display: none;
+			}
+		}
+	}
+}
+
+/**********************************************
+Language specific styling
+**********************************************/
+
+html[lang='de-lu'] #fuelyoursenses section.content .section.home {
+	h1 {
+		font-size: 65px;
+
+		@media screen and (max-width: $screen-sm-min) {
+			font-size: 52px;
+		}
+
+		@media screen and (max-width: $screen-xsl-min) {
+			font-size: 35px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 26px;
+		}
+	}
+}
+
+html[lang='fr-lu'] #fuelyoursenses section.content .section.home,
+html[lang='fr-be'] #fuelyoursenses section.content .section.home {
+	h1 {
+		font-size: 78px;
+
+		@media screen and (max-width: $screen-sm-min) {
+			font-size: 63px;
+		}
+
+		@media screen and (max-width: $screen-xsl-min) {
+			font-size: 50px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 33px;
+		}
+	}
+}
+
+html[lang='it-it'] #fuelyoursenses section.content .section.home {
+	.content-body {
+		bottom: 120px;
+	}
+	h1 {
+		font-size: 57px;
+
+		@media screen and (max-width: $screen-sm-min) {
+			font-size: 50px;
+		}
+
+		@media screen and (max-width: $screen-xsl-min) {
+			font-size: 35px;
+		}
+
+		@media screen and (max-width: $screen-xsm-min) {
+			font-size: 25px;
+		}
+	}
+}
+
+/**********************************************
+IE styling
+**********************************************/
+
+html.lt-ie10 #fuelyoursenses section.content .section.home {
+	.background-image-container {
+		display: block;
+	}
+
+	.main-animation {
+		display: none;
+	}
+}
