@@ -448,9 +448,9 @@ Tribal.SideNav = function($) {
 
     config._openState = false;
 
-    if (config.targetEl.length !== 1) return console.error('SideNav targetEl expected to be a length of 1 in init');
-
-    if (config.triggerEls.length < 1) return console.error('SideNav triggerEls expected to be a length of at least 1 in init');
+    // if (config.targetEl.length !== 1) return console.error('SideNav targetEl expected to be a length of 1 in init');
+    //
+    // if (config.triggerEls.length < 1) return console.error('SideNav triggerEls expected to be a length of at least 1 in init');
 
     listeners.navAnimateEnd();
 

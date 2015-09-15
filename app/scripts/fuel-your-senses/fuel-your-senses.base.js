@@ -121,12 +121,12 @@ Tribal.FuelYourSenses = function($) {
       self.osUtil = new Tribal.FuelYourSenses.utils.osUtil();
       self.windowUtil = new Tribal.FuelYourSenses.utils.windowUtil();
 
-      var home = new Tribal.FuelYourSenses.Home();
-      home.init();
-      // var yourSenses = new Tribal.FuelYourSenses.YourSenses();
-      // yourSenses.init();
-      var slick = new Tribal.FuelYourSenses.Slick();
-      slick.init();
+      // var home = new Tribal.FuelYourSenses.Home();
+      // home.init();
+      var yourSenses = new Tribal.FuelYourSenses.YourSenses();
+      yourSenses.init();
+      // var slick = new Tribal.FuelYourSenses.Slick();
+      // slick.init();
       // var quiz = new Tribal.FuelYourSenses.Quiz();
       // quiz.init();
       var tracking = new Tribal.FuelYourSenses.Tracking();

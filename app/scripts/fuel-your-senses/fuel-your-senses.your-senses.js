@@ -37,6 +37,7 @@
 
 	   // Setup sight button
 	   $("section.your-senses").find("a.sight-button").click(function(evt) {
+			 	console.log('sight');
 	      self.animateToSlideByIndex(self.currentSlideIndex-1);
 	      evt.preventDefault();
 	      return false;
@@ -44,6 +45,7 @@
 
 	   // Setup sound button
 	   $("section.your-senses").find("a.sound-button").click(function(evt) {
+				console.log('sound');
 	      self.animateToSlideByIndex(self.currentSlideIndex+1);
 	      evt.preventDefault();
 	      return false;

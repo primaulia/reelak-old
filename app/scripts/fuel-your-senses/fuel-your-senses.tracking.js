@@ -6,7 +6,7 @@
 (function($) {
 	Tribal.FuelYourSenses.Tracking = function() {
 		var tracking = {
-			/** 
+			/**
 			 * init
 			 * Initiates tracking
 			 */
@@ -21,7 +21,7 @@
 				this.initFloodlight();
 			},
 
-			/** 
+			/**
 			 * initFloodlight
 			 * Initiates the Floodlight tracking
 			 */
@@ -76,15 +76,15 @@
 			   });
 
 			   // Quiz
-			   $("section.quiz").find("a.start-quiz-button").click(function(evt) {
-			      self.debugUtil.log(self.type, "FLTrack:UK_FuelYourSenses_Quiz-Start");
-			   	trackFloodlight("fys", "fys_qzst");
-			   });
+			  //  $("section.quiz").find("a.start-quiz-button").click(function(evt) {
+			  //     self.debugUtil.log(self.type, "FLTrack:UK_FuelYourSenses_Quiz-Start");
+			  //  	trackFloodlight("fys", "fys_qzst");
+			  //  });
 
-			   $("body").bind(Tribal.FuelYourSenses.QuizEvent.ON_QUIZ_RESULT, function(evt, data) {
-	            self.debugUtil.log(self.type, "FLTrack:UK_FuelYourSenses_Quiz-End");
-	            trackFloodlight("fys", "fys_qzen");
-	         });
+			  //  $("body").bind(Tribal.FuelYourSenses.QuizEvent.ON_QUIZ_RESULT, function(evt, data) {
+	      //       self.debugUtil.log(self.type, "FLTrack:UK_FuelYourSenses_Quiz-End");
+	      //       trackFloodlight("fys", "fys_qzen");
+	      //    });
 
 			   // McLaren-Honda and Esso
 				$("section.maclaren-honda-and-esso").find("a.social-button.facebook").click(function(evt) {
@@ -101,7 +101,7 @@
 			   trackFloodlight("fys", "fys_lp");
 			},
 
-			/** 
+			/**
 			 * initGoogleAnalytics
 			 * Initiates the Google Analytics tracking
 			 */
@@ -170,27 +170,27 @@
 			   	ga("send", "event", "Interact", "Click", "Start_Quiz_McLaren-Honda");
 			   });
 
-			   $("body").bind(Tribal.FuelYourSenses.QuizEvent.ON_QUIZ_RESULT, function(evt, data) {
-	            self.debugUtil.log(self.type, data.mostCommonScoreType, "GATrack:Quiz_Result");
-	            switch (data.mostCommonScoreType) {
-	            	case 1:
-	            		self.debugUtil.log(self.type, "GATrack:The_Driver");
-	            		ga("send", "event", "Interact", "Quiz_Result", "The_Driver");
-	            		break;
-	            	case 2:
-	            		self.debugUtil.log(self.type, "GATrack:The_Mechanic");
-	            		ga("send", "event", "Interact", "Quiz_Result", "The_Mechanic");
-	            		break;
-	            	case 3:
-	            		self.debugUtil.log(self.type, "GATrack:The_Team_Boss");
-	            		ga("send", "event", "Interact", "Quiz_Result", "The_Team_Boss");
-	            		break;
-	            	case 4:
-	            		self.debugUtil.log(self.type, "GATrack:Race_Engineer");
-	            		ga("send", "event", "Interact", "Quiz_Result", "Race_Engineer");
-	            		break;
-	            }
-	         });
+			  //  $("body").bind(Tribal.FuelYourSenses.QuizEvent.ON_QUIZ_RESULT, function(evt, data) {
+	      //       self.debugUtil.log(self.type, data.mostCommonScoreType, "GATrack:Quiz_Result");
+	      //       switch (data.mostCommonScoreType) {
+	      //       	case 1:
+	      //       		self.debugUtil.log(self.type, "GATrack:The_Driver");
+	      //       		ga("send", "event", "Interact", "Quiz_Result", "The_Driver");
+	      //       		break;
+	      //       	case 2:
+	      //       		self.debugUtil.log(self.type, "GATrack:The_Mechanic");
+	      //       		ga("send", "event", "Interact", "Quiz_Result", "The_Mechanic");
+	      //       		break;
+	      //       	case 3:
+	      //       		self.debugUtil.log(self.type, "GATrack:The_Team_Boss");
+	      //       		ga("send", "event", "Interact", "Quiz_Result", "The_Team_Boss");
+	      //       		break;
+	      //       	case 4:
+	      //       		self.debugUtil.log(self.type, "GATrack:Race_Engineer");
+	      //       		ga("send", "event", "Interact", "Quiz_Result", "Race_Engineer");
+	      //       		break;
+	      //       }
+	      //    });
 
 				// McLaren-Honda and Esso
 				$("section.maclaren-honda-and-esso").find("a.social-button.facebook").click(function(evt) {
